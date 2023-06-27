@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html", first_name="nibras", last_name="alyassar")
+    return render_template("index.html")
 
 
 @app.route("/<name>")
@@ -15,8 +15,8 @@ def dashboard(name):
 
 @app.route("/main")
 def main():
-    return redirect(url_for("dashboard", name="nibras"))
+    return redirect(url_for("dashboard", name="asdasd"))
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
